@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  
+  <title>手作り石けん教室　Bell field</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+  <header id="luxbar" class="luxbar-fixed">
+  <input type="checkbox" class="luxbar-checkbox" id="luxbar-checkbox"/>
+  <div class="luxbar-menu luxbar-menu-right luxbar-menu-light">
+      <ul class="luxbar-navigation">
+          <li class="luxbar-header">
+            <%= link_to image_tag("/images/logo.png"), "/"%>
+              <label class="luxbar-hamburger luxbar-hamburger-doublespin" 
+              id="luxbar-hamburger" for="luxbar-checkbox"> <span></span> </label>
+          </li>
+          <% if session[:user_id] %>
+          <li class="luxbar-item"><%= link_to("新規投稿","/posts/new") %></li>
+          <li class="luxbar-item"><%= link_to("ログアウト","/logout",{method: :post}) %></li>
+          <% end %>
+          <li class="luxbar-item"><%= link_to("HOME","/") %></li>
+          <li class="luxbar-item"><%= link_to("LESSON","/lesson") %></li>
+          <li class="luxbar-item"><%= link_to("GALLERY","/gallery") %></li>
+          <li class="luxbar-item"><%= link_to("BLOG","/posts/index") %></li>
+          <li class="luxbar-item"><%= link_to("CONTACT","/contact") %></li>
+      </ul>
+  </div>
+  </header>
+
+  <%= yield %>
+    
+  <footer>
+      <nav>
+        <ul class="clearfix">
+          <li><%= link_to("HOME","/") %></li>
+          <li><%= link_to("LESSON","/lesson") %></li>
+          <li><%= link_to("GALLERY","/gallery") %></li>
+          <li><%= link_to("BLOG","/posts/index") %></li>
+          <li><%= link_to("CONTACT","/contact") %></li>
+        </ul>
+      </nav>
+      <nav>
+        <ul class="clearfix">
+          <p>&copy;Bell field</p>
+          <!--<li><%= link_to("管理者ログイン","/login") %></li>-->
+        </ul>
+      </nav>
+  </footer>
+</body>
+</html>

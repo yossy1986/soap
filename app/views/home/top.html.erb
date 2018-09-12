@@ -1,0 +1,124 @@
+<div id="bg">
+  <div id="top-text">
+    <h1>手作り石けん教室</h1>
+    <p>Bell field</p>
+    <h2>手作り石けんから生まれる泡は、まるで繭から丁寧に作られた真綿のように、優しく包んでくれます。。。</h2>
+  </div>
+</div>
+
+<!--About us-->
+<section class="about-us">
+  <div class="container">
+    <h1>About us</h1>
+    <p>手作り石けん教室Bell fieldでは、<br>コールドプロセス製法で<br>
+    肌に優しい低刺激の石けんを作っています。<br>
+    ビギナーさんを対象にした教室ですので、<br>
+    石けん作りが初めての方や、以前に作ったことはあるけど<br>
+    また作りたいという方々にお越しいただいてます。<br>
+    現在、全てのレッスンは単発制になっていますので、<br>
+    作りたい時だけ受講していただけます。
+    </div>
+  </section>
+  
+<!--Instructor-->
+<section id="instructor">
+    <h1>Instructor</h1>
+    <img src="/images/soap7.jpg" alt="" width ="300" height="200">
+    <h2>講師　藤原　裕子</h2>
+    <img src="/images/handmade.png" alt="" width ="50" height="50" class="handmade-border">
+    <P>一般社団法人　ハンドメイド石けん協会認定　<br>ジュニアソーパー<br>
+    一般社団法人　ハンドメイド石けん協会認定　<br>犬の石けんマイスター</P>
+</section>
+
+<!--Lessons-->
+<section class="lessons">
+  <div class="container">
+    <h1>Lessons</h1>
+    <div class="flex">
+      <section class="lesson">
+        <h2>ベーシックソープ(体験コース)</h2>
+        <p>初めての方はこちらから!この講座では<br>手作り石けんの基礎をしっかりお伝えします。</p>
+        <p><%= link_to("Read More","/lesson",class: "border") %></p>
+        <img src="/images/soap1.jpg" alt="">
+      </section>
+      <section class="lesson">
+        <h2>宝石石けん</h2>
+        <p>キラキラ輝くジュエリーのよう。。。<br>
+        3種類6個の石けんを作ります。</p>
+        <p><%= link_to("Read More","/lesson",class: "border") %></p>
+        <img src="/images/soap7.jpg" alt="">
+      </section>
+    </div>
+    
+    <div class="flex">
+      <section class="lesson">
+        <h2>マヌカハニーソープ</h2>
+        <p>当教室で一番人気のレッスン。<br>
+        甘い香りで癒され、洗い上がりもしっとり。</p>
+        <p><%= link_to("Read More","/lesson/#honey",class: "border") %></p>
+        <img src="/images/soap8.jpg" alt="">
+      </section>
+      <section class="lesson">
+        <h2>美白のハーブ石けん</h2>
+        <p>美白効果が高いヒースの浸出油と、毛穴の<br>
+        汚れをよく落としてくれるクレイを使用します。</p>
+        <p><%= link_to("Read More","/lesson/#bihaku",class: "border") %></p>
+        <img src="/images/soap5.jpg" alt="">
+      </section>
+    </div>
+    <h3><%= link_to("講座一覧へ","/lesson",class: "border") %></h3>
+  </div>
+</section>
+
+<!--Blog-->
+<section class="articles">
+  <div class="container">
+    <h1>Articles</h1>
+    <div class="flex">
+      <% @posts[0..1].each do |post| %>
+      <section class="article">
+        <img src="<%= "/post_images/#{post.image_name}" %>">
+        <h2><%= post.title %></h2>
+        <p><%= simple_format(post.content.truncate(30)) %></p>
+        <p><%= link_to("Read More","/posts/#{post.id}",class: "border") %></p>
+      </section>
+      <% end %>
+    </div>
+    
+    <div class="flex">
+      <% @posts[2..3].each do |post| %>
+      <section class="article">
+        <img src="<%= "/post_images/#{post.image_name}" %>">
+        <h2><%= post.title %></h2>
+        <p><%= simple_format(post.content.truncate(30)) %></p>
+        <p><%= link_to("Read More","/posts/#{post.id}",class: "border") %></p>
+      </section>
+      <% end %>
+    </div>
+  </div>
+</section>
+
+<!--Feed back-->
+<section class="feedback">
+  <div class="container">
+    <h1>Feedback</h1>
+    <div class="flex">
+      <section class="voice">
+        <img src="/images/soap6.jpg" alt="">
+        <h2>利用者の声</h2>
+        <p>楽しかったです。楽しかったです</p>
+      </section>
+      <section class="voice">
+        <img src="/images/soap7.jpg" alt="">
+        <h2>利用者の声</h2>
+        <p>楽しかったです。楽しかったです</p>
+      </section>
+      <section class="voice">
+        <img src="/images/soap8.jpg" alt="">
+        <h2>利用者の声</h2>
+        <p>楽しかったです。楽しかったです。</p>
+      </section>
+    </div>
+  </div>
+</section>
+    

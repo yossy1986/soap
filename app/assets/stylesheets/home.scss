@@ -1,0 +1,177 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#bg {
+  background-image: image-url("soap.jpg");
+  background-size: cover;
+  height: 600px;
+  background-position: 50% 90%;
+}
+
+.bg2 {
+  background-image: image-url("bg2.jpg");
+  width:100%;
+  height:250px;
+  background-size:cover;
+  background-position: 50% 85%;
+}
+
+.bg2 h1 {
+  font-family:cursive;
+  color:#fff;
+  font-size:60px;
+  margin:0;
+  padding-top: 100px;
+  text-align: center;
+}
+
+.wrapper {
+  padding:100px 0;
+}
+
+#top-text {
+  padding-top: 200px;
+  text-align: center;
+}
+
+#top-text h1 {
+  font-weight: normal;
+  font-size: 20px;
+}
+
+#top-text p {
+  font-size: 50px;
+  font-family: cursive;
+  margin-top: 0;
+}
+
+#top-text h2{
+  font-size:20px;
+  font-weight:normal;
+  padding-top:30px;
+}
+
+/*メイン*/
+section {
+  text-align:center;
+}
+
+section h1 {
+  margin: 0;
+  padding-top:40px;
+  line-height: 60px;
+  font-family: cursive;
+  font-size:34px;
+}
+
+section p {
+  font-size: 14px;
+  line-height: 2.5;
+}
+.about-us {
+  padding-bottom: 70px;
+}
+
+.about-us p {
+  font-size: 12px;
+  line-height: 3;
+}
+
+.handmade-border {
+  border:1px solid #333;
+}
+.lessons {
+  padding-bottom: 60px;
+}
+
+.lessons h1,.articles h1 {
+  padding-bottom:30px;
+}
+
+.lesson, .article{
+  margin-bottom: 50px;
+  text-align:center;
+}
+
+.lesson h2, #instructor h2, .article h2{
+  font-weight: normal;
+  font-size: 20px;
+}
+
+.lesson h3 {
+  font-weight:normal;
+  font-size:20px;
+}
+.lesson img, .article img{
+  width: 300px;
+  height: 220px;
+}
+
+
+.lesson-text p{
+  text-align:left;
+  line-height:1.5;
+}
+
+.border {
+  font-weight:normal;
+  border:1px solid #333;
+  padding:6px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all  0.3s ease;
+}
+
+.border:hover {
+  background:gray;
+  color:#fff;
+}
+.voice {
+  margin-top: 80px;
+  position: relative;
+  padding: 60px 60px 50px;
+  box-sizing: border-box;
+}
+
+.voice h2 {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+.voice img{
+  width: 110px;
+  height: 110px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: -55px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+}
+
+.picture img{
+  width:300px;
+  height:220px;
+}
+
+iframe {
+  width:80%;
+  height:500px;
+}
+
+.qa p {
+  text-align:left;
+}
+
+.qa p:last-child,#thanks p:last-child {
+  margin-bottom:0;
+}
+
+#thanks h2 {
+  margin:0;
+  padding-top:70px;
+}

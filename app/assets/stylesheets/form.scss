@@ -1,0 +1,85 @@
+form {
+  /* フォームをページの中央に置く */
+  margin: 0 auto;
+  /* フォームの範囲がわかるようにする */
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+}
+
+.form {
+  padding-top:40px;
+}
+
+form div + div {
+  margin-top: 1em;
+}
+
+label {
+  /* すべてのラベルを同じサイズにして、きちんと揃える */
+  display: inline-block;
+  width: 120px;
+  text-align: right;
+}
+
+input, textarea {
+  /* すべてのテキストフィールドのフォント設定を一致させる
+     デフォルトで、textarea は等幅フォントが設定されている */
+  font: 1em sans-serif;
+
+  /* すべてのテキストフィールドを同じサイズにする */
+  width: 300px;
+  box-sizing: border-box;
+
+  /* テキストフィールドのボーダーの外見を同一にする */
+  border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+  /* アクティブな要素を少し強調する */
+  border-color: #000;
+}
+
+textarea {
+  /* 複数行のテキストフィールドをラベルにきちんと揃える */
+  vertical-align: top;
+
+  /* テキスト入力に十分な領域を与える */
+  height: 10em;
+}
+
+#new {
+  width:80%;
+  height:600px;
+}
+.button {
+  /* ボタンを他のテキストフィールドと同じ場所に置く */
+  
+}
+
+button {
+  /* このマージンは、ラベルとテキストフィールドの間のスペースと
+   おおよそ同じスペースを表す */
+   font: 1em sans-serif;
+   width:70px;
+   height:30px;
+}
+
+@media screen and (max-width:480px) {
+input, textarea {
+    width: 250px;
+}
+
+form {
+    // width:320px;
+}
+
+label {
+  text-align: center;
+}
+
+.button {
+    text-align:center;
+    padding-left:0;
+}
+}

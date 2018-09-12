@@ -1,0 +1,22 @@
+<div class="bg2"><h1>編集</h1></div>
+<section class="lesson form">
+  <div class="container">
+    <%= form_tag("/posts/#{@post.id}/update",{multipart: true}) do %>
+      <div>
+        <label for="name">画像</label>
+        <input id="name" name="image" type="file" value="<%= @post.image_name %>">
+      </div>
+      <div>
+        <label for="tel">タイトル</label>
+        <input id="tel" name="title" value="<%= @post.title %>">
+      </div>
+      <div>
+        <label for="email">本文</label>
+        <textarea id ="new" name="content"><%= @post.content %></textarea>
+      </div>
+      <div class="button">
+        <button type="submit">編集</button>
+      </div>
+    <% end %>
+  </div>
+</section>
