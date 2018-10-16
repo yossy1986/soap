@@ -74,27 +74,6 @@
 <section class="articles">
   <div class="container">
     <h1>Articles</h1>
-    <div class="flex">
-      <% @posts[0..1].each do |post| %>
-      <section class="article">
-        <img src="<%= "/post_images/#{post.image_name}" %>">
-        <h2><%= post.title %></h2>
-        <p><%= simple_format(post.content.truncate(30)) %></p>
-        <p><%= link_to("Read More","/posts/#{post.id}",class: "border") %></p>
-      </section>
-      <% end %>
-    </div>
-    
-    <div class="flex">
-      <% @posts[2..3].each do |post| %>
-      <section class="article">
-        <img src="<%= "/post_images/#{post.image_name}" %>">
-        <h2><%= post.title %></h2>
-        <p><%= simple_format(post.content.truncate(30)) %></p>
-        <p><%= link_to("Read More","/posts/#{post.id}",class: "border") %></p>
-      </section>
-      <% end %>
-    </div>
   </div>
 </section>
 
