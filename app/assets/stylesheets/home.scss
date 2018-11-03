@@ -27,7 +27,8 @@
 }
 
 .wrapper {
-  padding:100px 0;
+  padding:100px 10px;
+  margin:0 auto;
 }
 
 #top-text {
@@ -209,5 +210,11 @@ iframe {
 .lesson {
   width:100%;
   margin:0 auto 50px auto ;
+}
+}
+
+@media screen and (min-width:567px) {
+.wrapper {
+  width:80%;
 }
 }
