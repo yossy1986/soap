@@ -185,11 +185,13 @@ iframe {
 @media screen and (max-width:480px) {
   .lesson {
   background-size:290px 100%;
-  padding:10px;
 }
 .lesson img, .article img{
   width: 260px;
   height: 200px;
+}
+.lesson h2, #instructor h2, .article h2{
+  font-size: 18px;
 }
 }
 
