@@ -7,10 +7,6 @@ form {
   border-radius: 1em;
 }
 
-.form {
-  padding-top:40px;
-}
-
 form div + div {
   margin-top: 1em;
 }
@@ -68,10 +64,6 @@ button {
 @media screen and (max-width:480px) {
 input, textarea {
     width: 250px;
-}
-
-form {
-    // width:320px;
 }
 
 label {

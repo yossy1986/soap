@@ -38,18 +38,24 @@
 #top-text h1 {
   font-weight: normal;
   font-size: 20px;
+  color:#fff;
+  text-shadow:1px 1px 17px #0b0a0b;
 }
 
 #top-text p {
   font-size: 50px;
   font-family: cursive;
   margin-top: 0;
+  color:#fff;
+  text-shadow:1px 1px 17px #0b0a0b;
 }
 
 #top-text h2{
   font-size:20px;
   font-weight:normal;
   padding-top:30px;
+  color:#fff;
+  text-shadow:1px 1px 17px #0b0a0b;
 }
 
 /*メイン*/
@@ -94,12 +100,13 @@ section p {
   padding-bottom:20px;
   text-align:center;
   width:50%;
+}
+.top-lesson {
   background-image: url("/images/frame.png");
   background-size:350px 100%;
   background-repeat: no-repeat;
   background-position:center;
 }
-
 .lesson h2, #instructor h2, .article h2{
   font-weight: normal;
   font-size: 20px;
@@ -183,10 +190,10 @@ iframe {
 }
 
 @media screen and (max-width:480px) {
-  .lesson {
+.top-lesson {
   background-size:290px 100%;
 }
-.lesson img, .article img{
+.top-lesson img, .article img{
   width: 260px;
   height: 200px;
 }
