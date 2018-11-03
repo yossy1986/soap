@@ -181,6 +181,18 @@ iframe {
   margin:0;
   padding-top:70px;
 }
+
+@media screen and (max-width:480px) {
+  .lesson {
+  background-size:290px 100%;
+  padding:10px;
+}
+.lesson img, .article img{
+  width: 260px;
+  height: 200px;
+}
+}
+
 @media screen and (max-width:768px) {
 .flex {
   flex-direction: column;
