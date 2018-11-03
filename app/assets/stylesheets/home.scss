@@ -91,7 +91,13 @@ section p {
 
 .lesson, .article{
   margin-bottom: 50px;
+  padding-bottom:20px;
   text-align:center;
+  width:50%;
+  background-image: url("/images/frame.png");
+  background-size:350px 100%;
+  background-repeat: no-repeat;
+  background-position:center;
 }
 
 .lesson h2, #instructor h2, .article h2{
@@ -174,4 +180,13 @@ iframe {
 #thanks h2 {
   margin:0;
   padding-top:70px;
+}
+@media screen and (max-width:768px) {
+.flex {
+  flex-direction: column;
+}
+.lesson {
+  width:100%;
+  margin:0 auto 50px auto ;
+}
 }
