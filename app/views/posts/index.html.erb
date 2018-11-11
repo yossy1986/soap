@@ -1,13 +1,12 @@
 <div class="bg2"><h1>Articles</h1></div>
-<section class="wrapper">
-  <div class="container">
+<section>
+  <div class="container wrapper">
     <div class="flex">
       <% @posts.each do |post| %>
-        <section class="lesson">
-          <img src="<%= "/post_images/#{post.image_name}" %>">
+        <section class="post">
+          <%= image_tag post.image.url if post.image? %>
           <h2><%= post.title %></h2>
-          <p><%= simple_format(post.content.truncate(30)) %></p>
-          <%= link_to("Read More","/posts/#{post.id}",class: "border") %>
+          <%= link_to("記事をみる","/posts/#{post.id}",class: "border") %>
         </section>
       <% end %>
       

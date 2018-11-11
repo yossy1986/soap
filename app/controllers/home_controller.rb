@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   def top
     @posts = Post.all.order(created_at: :desc)
+    @lessons = Lesson.all
   end
   
   def lesson

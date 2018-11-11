@@ -1,0 +1,30 @@
+<div class="bg2"><h1>Lesson new</h1></div>
+<section>
+  <div class="container wrapper new">
+    <%= form_tag("/lessons",{multipart: true}) do %>
+      <div>
+        <%= label_tag :image,"写真" %><br>
+        <%= file_field_tag :image, accept: 'image/jpeg,image/gif,image/png.image/jpg' %><br>
+      </div>
+      <div>
+        <label for="title">タイトル</label>
+        <input id="title" name="title">
+      </div>
+       <div>
+        <label for="subtitle">サブタイトル</label>
+        <textarea id="subtitle" name="subtitle"></textarea>
+      </div>
+      <div>
+        <label for="content">本文</label>
+        <textarea  name="content"></textarea>
+      </div>
+      <div>
+        <label for="price">受講費</label>
+        <input id ="price" name="price">
+      </div>
+      <div class="button">
+        <button type="submit">編集</button>
+      </div>
+    <% end %>
+  </div>
+</section>

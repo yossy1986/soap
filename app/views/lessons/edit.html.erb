@@ -1,0 +1,30 @@
+<div class="bg2"><h1>レッスン編集</h1></div>
+<section class="lesson form new">
+  <div class="container">
+    <%= form_tag("/lessons/#{@lesson.id}",{multipart: true,method: "patch"}) do %>
+      <div>
+        <%= label_tag :image,"写真" %><br>
+        <%= file_field_tag :image, accept: 'image/jpeg,image/gif,image/png' %><br>
+      </div>
+      <div>
+        <label for="title">タイトル</label>
+        <input id="title" name="title" value="<%= @lesson.title %>">
+      </div>
+       <div>
+        <label for="subtitle">サブタイトル</label>
+        <textarea id="subtitle" name="subtitle"><%= @lesson.subtitle %></textarea>
+      </div>
+      <div>
+        <label for="content">本文</label>
+        <textarea  name="content"><%= @lesson.content %></textarea>
+      </div>
+      <div>
+        <label for="price">受講費</label>
+        <input id ="price" name="price" value="<%= @lesson.price %>">
+      </div>
+      <div class="button">
+        <button type="submit">編集</button>
+      </div>
+    <% end %>
+  </div>
+</section>

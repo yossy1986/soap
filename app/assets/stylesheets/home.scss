@@ -24,6 +24,7 @@
   margin:0;
   padding-top: 100px;
   text-align: center;
+  text-shadow:1px 1px 17px #0b0a0b;
 }
 
 .wrapper {
@@ -60,11 +61,11 @@
 }
 
 /*メイン*/
-section {
+.top {
   text-align:center;
 }
 
-section h1 {
+.top h1 {
   margin: 0;
   padding-top:40px;
   line-height: 60px;
@@ -72,31 +73,30 @@ section h1 {
   font-size:34px;
 }
 
-section p {
+.top p {
   font-size: 14px;
   line-height: 2.5;
 }
-.about-us {
+.top-about-us {
   padding-bottom: 70px;
 }
-
-.about-us p {
-  font-size: 12px;
-  line-height: 3;
+.top-about-us h3 {
+  font-weight:normal;
+  line-height:3;
 }
 
 .handmade-border {
   border:1px solid #333;
 }
-.lessons {
+.top-lessons {
   padding-bottom: 60px;
 }
 
-.lessons h1,.articles h1 {
+.top-lessons h1,.top-articles h1 {
   padding-bottom:30px;
 }
 
-.lesson, .article{
+.top-lesson, .top-article{
   margin-bottom: 50px;
   padding-bottom:20px;
   text-align:center;
@@ -108,22 +108,22 @@ section p {
   background-repeat: no-repeat;
   background-position:center;
 }
-.lesson h2, #instructor h2, .article h2{
+.top-lesson h2, .top-instructor h2, .top-article h2{
   font-weight: normal;
   font-size: 20px;
 }
 
-.lesson h3 {
+.top-lesson h3 {
   font-weight:normal;
   font-size:20px;
 }
-.lesson img, .article img{
+.top-lesson img, .top-article img,.top-picture img {
   width: 300px;
   height: 220px;
 }
 
 
-.lesson-text p{
+.top-lesson-text p{
   text-align:left;
   line-height:1.5;
 }
@@ -167,47 +167,29 @@ section p {
   border: 6px solid #fff;
 }
 
-.picture img{
-  width:300px;
-  height:220px;
-}
-
-iframe {
-  width:80%;
-  height:500px;
-}
-
-.qa p {
-  text-align:left;
-}
-
-.qa p:last-child,#thanks p:last-child {
-  margin-bottom:0;
-}
-
-#thanks h2 {
-  margin:0;
-  padding-top:70px;
-}
 
 @media screen and (max-width:480px) {
+  
+#top-text h2{
+  font-size:14px;
+}
+.top-about-us h3 {
+  font-size:14px;
+}
 .top-lesson {
   background-size:290px 100%;
 }
-.top-lesson img, .article img{
+.top-lesson img, .top-article img{
   width: 260px;
   height: 200px;
 }
-.lesson h2, #instructor h2, .article h2{
+.top-lesson h2, .top-instructor h2, .toparticle h2{
   font-size: 18px;
 }
 }
 
 @media screen and (max-width:768px) {
-.flex {
-  flex-direction: column;
-}
-.lesson {
+.top-lesson,.top-article {
   width:100%;
   margin:0 auto 50px auto ;
 }

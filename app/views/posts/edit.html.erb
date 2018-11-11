@@ -1,18 +1,18 @@
 <div class="bg2"><h1>編集</h1></div>
-<section class="lesson form">
-  <div class="container">
+<section>
+  <div class="container wrapper new">
     <%= form_tag("/posts/#{@post.id}/update",{multipart: true}) do %>
       <div>
-        <label for="name">画像</label>
-        <input id="name" name="image" type="file" value="<%= @post.image_name %>">
+        <label for="image">画像</label>
+        <%= file_field_tag :image, accept: 'image/jpeg,image/gif,image/png' %>
       </div>
       <div>
-        <label for="tel">タイトル</label>
-        <input id="tel" name="title" value="<%= @post.title %>">
+        <label for="title">タイトル</label>
+        <textarea id="title" name="title"><%= @post.title %></textarea>
       </div>
       <div>
-        <label for="email">本文</label>
-        <textarea id ="new" name="content"><%= @post.content %></textarea>
+        <label for="content">本文</label>
+        <textarea id ="content" name="content"><%= @post.content %></textarea>
       </div>
       <div class="button">
         <button type="submit">編集</button>

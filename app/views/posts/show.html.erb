@@ -1,15 +1,12 @@
 <div class="bg2"><h1>Article</h1></div>
-<section class="wrapper">
-  <div class="container">
-    <section class="lesson">
-      <img src="<%= "/post_images/#{@post.image_name}" %>">
+<section>
+  <div class="container wrapper post">
+      <%= image_tag @post.image.url if @post.image? %>
       <h2><%= @post.title %></h2>
-      <p><%= simple_format(@post.content) %></p>
-      <p><%= @post.created_at%></p>
+      <%= simple_format(@post.content) %>
       <% if session[:user_id] %>
       <%= link_to("編集","/posts/#{@post.id}/edit") %>
       <%= link_to("削除", "/posts/#{@post.id}/destroy", {method: "post"}) %>
       <% end %>
-    </section>
   </div>
 </section>

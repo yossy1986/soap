@@ -15,14 +15,12 @@ class PostsController < ApplicationController
   end
   
   def create
-      @post = Post.new(title: params[:name], content: params[:content], image_name:"default.jpg")
-      if params[:image]
-      @post.image_name = "#{@post.id}.jpg"
-      image = params[:image]
-      File.binwrite("public/post_images/#{@post.image_name}",image.read)
-      end
-      @post.save
+      @post = Post.new(title: params[:title], content: params[:content], image: params[:image])
+    if @post.save
       redirect_to("/posts/index")
+    else
+      render("posts/new")
+    end
   end
   
   def edit
@@ -33,11 +31,7 @@ class PostsController < ApplicationController
       @post = Post.find_by(id: params[:id])
       @post.title = params[:title]
       @post.content = params[:content]
-      if params[:image]
-      @post.image_name = "#{@post.id}.jpg"
-      image = params[:image]
-      File.binwrite("public/post_images/#{@post.image_name}",image.read)
-      end
+      @post.image = params[:image]
       if @post.save
       redirect_to("/posts/index")
       else

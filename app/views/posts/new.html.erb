@@ -1,18 +1,18 @@
 <div class="bg2"><h1>新規投稿</h1></div>
-<section class="lesson form">
-  <div class="container">
+<section>
+  <div class="container wrapper new">
     <%= form_tag("/posts/create",{multipart: true}) do %>
       <div>
-        <label for="name">画像</label>
-        <input id="name" name="image" type="file">
+        <label for="image">画像</label>
+        <%= file_field_tag :image, accept: 'image/jpeg,image/gif,image/png' %>
       </div>
       <div>
         <label for="title">タイトル</label>
-        <input id="title" name="name">
+        <textarea id="title" name="title"></textarea>
       </div>
       <div>
-        <label for="email">本文</label>
-        <textarea id ="new" name="content"></textarea>
+        <label for="content">本文</label>
+        <textarea id ="content" name="content"></textarea>
       </div>
       <div class="button">
         <button type="submit">投稿</button>

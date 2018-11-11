@@ -15,7 +15,7 @@
  */
 body {
   background-color: #fff;
-  font-family: Verdana,sans-serif;
+  font-family: 游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
   margin: 0;
   color: #333;
   font-weight: normal;
@@ -45,7 +45,6 @@ a {
 
 #logo a {
   font-size: 18px;
-  font-family: cursive;
 }
 
 #header-bg {
@@ -87,25 +86,9 @@ footer p {
 }
   
 /*レスポンシブル*/
-@media screen and (max-width:480px) {
-  
-#top-text h2{
-  font-size:14px;
-}
-
-.lesson p {
-  padding-left: 10px;
-}
-
-}
 
 
 @media screen and (min-width:768px) {
-
-.about-us p {
-  font-size: 20px;
-  line-height: 3;
-}
 
 footer ul {
   text-align: center;

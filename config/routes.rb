@@ -13,8 +13,8 @@ Rails.application.routes.draw do
   post 'posts/:id/update' => 'posts#update'
   post 'posts/:id/destroy' => 'posts#destroy'
   
+  resources :lessons
   
-  get 'lesson' => 'home#lesson'
   get 'gallery' => 'home#gallery'
   get 'access' => 'home#access'
   get 'contact' => 'home#contact'

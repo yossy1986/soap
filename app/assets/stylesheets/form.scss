@@ -5,13 +5,15 @@ form {
   padding: 1em;
   border: 1px solid #CCC;
   border-radius: 1em;
+  text-align:center;
+  
 }
 
 form div + div {
   margin-top: 1em;
 }
 
-label {
+.contact label {
   /* すべてのラベルを同じサイズにして、きちんと揃える */
   display: inline-block;
   width: 120px;
@@ -63,15 +65,16 @@ button {
 
 @media screen and (max-width:480px) {
 input, textarea {
-    width: 250px;
+    width: 280px;
 }
 
-label {
-  text-align: center;
 }
 
-.button {
+@media screen and (max-width:568px) {
+.contact label {
+    display:block;
+    width:100%;
     text-align:center;
-    padding-left:0;
 }
+
 }

@@ -2,9 +2,9 @@
 <section>
   <div class="container wrapper">
     <div class="flex">
-      <section class="lesson form">
+      <section class="form contact">
         <%= form_tag("/contact") do %>
-        <h2>お申し込みフォーム</h2>
+        <h2>お問い合わせフォーム</h2>
           <div>
             <label for="name">お名前</label>
             <input type="text" id="name" name="name" required value="<%= @contact.name %>">
@@ -18,40 +18,57 @@
             <input type="email" id="email" required name="email" value="<%= @contact.email %>">
           </div>
           <div>
-            <label for="content">申し込み内容<br>日時</label>
+            <label for="content">内容</label>
             <textarea type="text" id="content" name="content" required><%= @contact.content %></textarea>
           </div>
-          
-          <p>ご質問などもこちらからお願いします。</p>
-          
           <div class="button">
             <button type="submit">送信</button>
           </div>
         <% end %>
       </section>
       
-      <section class="lesson form">
-        <h3>お支払いについて</h3>
+      <section class="contact">
+        <h2>お支払いについて</h2>
         <p>初めての方は3日前までに指定の口座にお振込下さい。<br>
         2回目以降の方は振込み又は当日現金払いのどちらかでお願いします。</p>
-        <h3>キャンセルポリシー</h3>
+        <h2>キャンセルポリシー</h2>
         <p>前日〜当日のキャンセルは受講料の全額をいただきます。<br>
         他の日に変更の場合はキャンセル料は発生しません。<br>
         一度お支払い頂いた受講費は、理由の如何にかかわらず返金致しかねます。</p>
         <br>
       </section>
     </div>
-  </div>
   
-  <section class="qa">
+  <section class="qa contact">
     <div class="container">
       <h2>Q & A(よくあるご質問)</h2>
-      <p>Q．駐車場はありますか？<br>
-      A．専用の駐車場のご用意はありません。近くのコインパーキングをご案内しております。</p>
-      <p>Q.誰でも受講できますか？<br>
-      A.自宅教室は女性限定ですが、同伴に限り男性も受講していただけます。</p>
-      <p>Q.撮影はしても大丈夫ですか？<br>
-      A.レッスン中の撮影は、レッスン進行の妨げや他の方の迷惑にならない範囲でお願いします。</p>
+      <table>
+        <tr>
+          <th>Q.</th>
+          <td>駐車場はありますか？</td>
+        </tr>
+        <tr>
+          <th>A.</th>
+          <td>専用の駐車場のご用意はありません。近くのコインパーキングをご案内しております。</td>
+        </tr>
+        <tr>
+          <th>Q.</th>
+          <td>誰でも受講できますか？</td>
+        </tr>
+        <tr>
+          <th>A.</th>
+          <td>自宅教室は女性限定ですが、同伴に限り男性も受講していただけます。</td>
+        </tr>
+        <tr>
+          <th>Q.</th>
+          <td>撮影はしても大丈夫ですか？</td>
+        </tr>
+        <tr>
+          <th>A.</th>
+          <td>レッスン中の撮影は、レッスン進行の妨げや他の方の迷惑にならない範囲でお願いします。</td>
+        </tr>
+      </table>
     </div>
   </section>
+  </div>
 </section>

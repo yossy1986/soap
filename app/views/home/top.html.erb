@@ -7,21 +7,21 @@
 </div>
 
 <!--About us-->
-<section class="about-us">
+<section class="top-about-us top">
   <div class="container">
     <h1>About us</h1>
-    <p>手作り石けん教室Bell fieldでは、<br>コールドプロセス製法で<br>
+    <h3>手作り石けん教室Bell fieldでは、<br>コールドプロセス製法で<br>
     肌に優しい低刺激の石けんを作っています。<br>
     ビギナーさんを対象にした教室ですので、<br>
-    石けん作りが初めての方や、以前に作ったことはあるけど<br>
+    石けん作りが初めての方や、<br>以前に作ったことはあるけど<br>
     また作りたいという方々にお越しいただいてます。<br>
     現在、全てのレッスンは単発制になっていますので、<br>
-    作りたい時だけ受講していただけます。
+    作りたい時だけ受講していただけます。</h3>
     </div>
   </section>
   
 <!--Instructor-->
-<section id="instructor">
+<section class="top-instructor top">
     <h1>Instructor</h1>
     <img src="/images/soap7.jpg" alt="" width ="300" height="200">
     <h2>講師　藤原　裕子</h2>
@@ -31,56 +31,51 @@
 </section>
 
 <!--Lessons-->
-<section class="lessons">
+<section class="top-lessons top">
   <div class="container">
     <h1>Lessons</h1>
     <div class="flex">
-      <section class="lesson top-lesson">
-        <h2>ベーシックソープ(体験コース)</h2>
-        <p>初めての方はこちらから!この講座では<br>手作り石けんの基礎をしっかりお伝えします。</p>
-        <p><%= link_to("講座詳細へ","/lesson",class: "border") %></p>
-        <img src="/images/soap1.jpg" alt="">
+    <% if @lessons.present? %>
+    <% @lessons[0..1].each do |lesson| %>
+      <section class="top-lesson">
+        <h2><%= lesson.title %></h2>
+        <%= simple_format lesson.subtitle %>
+        <%= image_tag lesson.image.url if lesson.image? %>
       </section>
-      <section class="lesson top-lesson">
-        <h2>宝石石けん</h2>
-        <p>キラキラ輝くジュエリーのよう。。。<br>
-        3種類6個の石けんを作ります。</p>
-        <p><%= link_to("講座詳細へ","/lesson",class: "border") %></p>
-        <img src="/images/soap7.jpg" alt="">
-      </section>
+     <% end %>
     </div>
-    
     <div class="flex">
-      <section class="lesson top-lesson">
-        <h2>マヌカハニーソープ</h2>
+    <% @lessons[2..3].each do |lesson| %>
+      <section class="top-lesson">
+        <h2><%= lesson.title %></h2>
+        <%= simple_format lesson.subtitle %>
+        <%= image_tag lesson.image.url if lesson.image? %>
+      </section>
+     <% end %>
+    </div>
+    <% end %>
+    <div class="flex">
+      <section class="top-lesson top">
+        <h2>1DAYレッスン</h2>
         <p>当教室で一番人気のレッスン。<br>
         甘い香りで癒され、洗い上がりもしっとり。</p>
-        <p><%= link_to("講座詳細へ","/lesson/#honey",class: "border") %></p>
         <img src="/images/soap8.jpg" alt="">
       </section>
-      <section class="lesson top-lesson">
-        <h2>美白のハーブ石けん</h2>
-        <p>美白効果が高いヒースの浸出油と、毛穴の<br>
-        汚れをよく落としてくれるクレイを使用します。</p>
-        <p><%= link_to("講座詳細へ","/lesson/#bihaku",class: "border") %></p>
-        <img src="/images/soap5.jpg" alt="">
-      </section>
     </div>
-    <h3><%= link_to("講座一覧へ","/lesson",class: "border") %></h3>
+    <h3><%= link_to("講座一覧へ","/lessons",class: "border") %></h3>
   </div>
 </section>
 
 <!--Blog-->
-<section class="articles">
+<section class="top-articles top">
   <div class="container">
     <h1>Articles</h1>
     <div class="flex">
-      <% if @post %>
+      <% if @posts.present? %>
       <% @posts[0..1].each do |post| %>
-      <section class="article">
-        <img src="<%= "/post_images/#{post.image_name}" %>">
+      <section class="top-article">
+        <%= image_tag post.image.url if post.image? %>
         <h2><%= post.title %></h2>
-        <p><%= simple_format(post.content.truncate(30)) %></p>
         <p><%= link_to("記事詳細へ","/posts/#{post.id}",class: "border") %></p>
       </section>
       <% end %>
@@ -88,10 +83,9 @@
     
     <div class="flex">
       <% @posts[2..3].each do |post| %>
-      <section class="article">
-        <img src="<%= "/post_images/#{post.image_name}" %>">
+      <section class="top-article">
+        <%= image_tag post.image.url if post.image? %>
         <h2><%= post.title %></h2>
-        <p><%= simple_format(post.content.truncate(30)) %></p>
         <p><%= link_to("記事詳細へ","/posts/#{post.id}",class: "border") %></p>
       </section>
       <% end %>
@@ -101,7 +95,7 @@
 </section>
 
 <!--Feed back-->
-<section class="feedback">
+<section class="top-feedback top">
   <div class="container">
     <h1>Feedback</h1>
     <div class="flex">

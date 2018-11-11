@@ -1,20 +1,31 @@
-// Place all the styles related to the Lessons controller here.
+// Place all the styles related to the lessons controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-table {
-    margin-top:40px;
+.lessons {
+    margin-bottom:70px;
 }
-table tr {
-    border-bottom:1px solid #ccc;
-    font-size:15px;
+.lessons h2 {
+    font-weight:normal;
+    text-align:center;
 }
-table th {
-    width:70px;
-    padding: 10px;
-    vertical-align:top;
-    text-align:left;
+.lessons table tr {
+    line-height:2;
 }
-table td {
-    text-align:left;
-    padding: 10px 10px 10px 0;
+.lessons table th {
+    font-weight:normal;
+    vertical-align:top
+}
+.lessons table td {
+    padding-left:20px;
+}
+.lessons img {
+    width:200px;
+    height:200px;
+    text-align:center;
+}
+.center {
+    text-align:center;
+}
+.left {
+    text-align:left !important;
 }

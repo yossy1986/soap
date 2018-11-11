@@ -1,0 +1,42 @@
+<div class="bg2"><h1>Lesson</h1></div>
+<section>
+   <div class="container wrapper">
+     <div class="flex">
+       <section class="lessons center">
+        <h2><%= @lesson.title %></h2>
+        <p class="left"><%= simple_format @lesson.content %></p>
+        <p>受講費<%= @lesson.price %></p>
+        <%= image_tag @lesson.image.url if @lesson.image? %>
+        <% if session[:user_id] %>
+          <p><%= link_to "編集","/lessons/#{@lesson.id}/edit" %>
+          <%= link_to "削除","/lessons/#{@lesson.id}", {method: "delete"} %></p>
+        <% end %>
+      </section>
+      
+      <section class="form contact">
+        <%= form_tag("/contact") do %>
+        <h2>お問い合わせフォーム</h2>
+          <div>
+            <label for="name">お名前</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div>
+            <label for="tel">電話番号</label>
+            <input id="tel" name="tel" required>
+          </div>
+          <div>
+            <label for="email">メールアドレス</label>
+            <input type="email" id="email" required>
+          </div>
+          <div>
+            <label for="content">内容</label>
+            <textarea type="text" id="content" name="content" required></textarea>
+          </div>
+          <div class="button">
+            <button type="submit">送信</button>
+          </div>
+        <% end %>
+      </section>
+    </div>
+  </div>
+</section>
